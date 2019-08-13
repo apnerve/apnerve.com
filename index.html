@@ -13,9 +13,12 @@
       type="text/css"
     />
     <style>
+      html {
+        font-size: 16px;
+      }
       body {
         background: #fbf9f2;
-        font: 1em Hack, serif;
+        font-family: Hack, serif;
         border-top: 0.125rem solid #cb0c35;
         margin: 0;
         padding: 0;
@@ -25,52 +28,101 @@
         position: relative;
         line-height: 1.6;
         color: #48565e;
-        padding: calc(8vh - 1rem) calc(8vw - 1rem);
+        padding: 1.5rem;
       }
-      .inner p {
-        position: relative;
+      .heading {
+        line-height: 1.2;
+        margin: 1rem 0 2rem;
+        font-size: 2rem;
+      }
+      .intro {
+        font-size: 1rem;
+        margin-bottom: 4rem;
+      }
+      .links {
+        font-size: 0.75rem;
       }
       a,
       a:link,
       a:visited {
         color: #48565e;
         text-decoration: none;
-        border-bottom: 0.125rem solid #439fd8;
-        padding: 0.25rem 0.25rem 0;
+        border-bottom: 1px solid;
+        padding: 0.125rem;
+        transition: all 200ms ease-in-out;
       }
+      a.twitter {
+        color: #1da1f2;
+      }
+      a.github {
+        color: #4078c0;
+      }
+      a.linkedin {
+        color: #0077b5;
+      }
+      a.stackoverflow {
+        color: #f48024;
+      }
+
       a:hover {
         background-color: #439fd8;
         color: #fff;
-        padding-bottom: 0.125rem;
+        border-color: inherit;
+      }
+      a.twitter:hover {
+        background-color: #1da1f2;
+      }
+      a.github:hover {
+        background-color: #4078c0;
+      }
+      a.linkedin:hover {
+        background-color: #0077b5;
+      }
+      a.stackoverflow:hover {
+        background-color: #f48024;
+      }
+      @media screen and (min-width: 640px) {
+        .inner {
+          padding: 2rem;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        html {
+          font-size: 24px;
+        }
       }
     </style>
   </head>
   <body>
     <div id="container">
       <div class="inner">
-        <img
-          src="https://graph.facebook.com/780605012/picture?type=large"
-          alt="praveen kumar"
-          style="border-radius: 100%; filter: grayscale(); margin-bottom: 2rem;"
-          width="100"
-          height="100"
-        />
         <main>
-          <h1>Hola! I'm Praveen</h1>
-          <p>
-            I'm an independent consultant specialising in frontend engineering,
-            based out of Hyderabad, India.
+          <h1 class="heading">Hola! I'm Praveen</h1>
+          <p class="intro">
+            I'm an independent software consultant specialising in frontend
+            engineering based out of Hyderabad, India.
           </p>
-          <p style="font-size: 0.75rem;">
-            <a target="_blank" href="https://twitter.com/apnerve">Twitter</a>
+          <p class="links">
+            <a
+              class="twitter"
+              target="_blank"
+              href="https://twitter.com/apnerve"
+              >Twitter</a
+            >
             &middot;
-            <a target="_blank" href="https://github.com/apnerve">Github</a>
+            <a class="github" target="_blank" href="https://github.com/apnerve"
+              >Github</a
+            >
             &middot;
-            <a target="_blank" href="https://www.linkedin.com/in/apnerve/"
+            <a
+              class="linkedin"
+              target="_blank"
+              href="https://www.linkedin.com/in/apnerve/"
               >LinkedIn</a
             >
             &middot;
             <a
+              class="stackoverflow"
               target="_blank"
               href="https://stackoverflow.com/users/69310/apnerve"
               >StackOverflow</a
